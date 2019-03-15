@@ -4,6 +4,10 @@
     background: #e3e4e5;
     border-bottom: solid 1px #e3e4e5;
     position: relative;
+<<<<<<< HEAD
+    z-index: 99;
+=======
+>>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
 }
 
 .top_location {
