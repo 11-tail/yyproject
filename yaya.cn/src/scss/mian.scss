@@ -1346,7 +1346,8 @@ a.red {
 .diy-elevator {
     position: fixed;
     top: 100px;
-    
+    display: none;
+    z-index: 9;
     a{
         width: 28px;
         height: 28px;
@@ -1367,4 +1368,7 @@ a.red {
     a:last-child {
         background: #4FB99F;
     }
+}
+.diy-elevator a.active1 {
+    background: #333;
 }

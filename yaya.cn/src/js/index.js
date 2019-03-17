@@ -95,13 +95,8 @@ window.onload = function () {
                 '-webkit-transform': ''
             })
         });
-<<<<<<< HEAD
         // -----------------------结束------------------------------
         //获取地址位置----------------------------------------------
-=======
-        // -----------------------结束--------------------
-        //地址位置----------------------------------------------
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
         var settings = $.extend({
             url: "lib/city/city.min.js",
             prov: null,
@@ -110,12 +105,6 @@ window.onload = function () {
             nodata: null,
             required: true,
         }, settings);
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
         //选择省份的事件委托判断
         $('.city-tab').on('click', 'a', function (ev) {
             if (ev.target.className == 'city-item1') {
@@ -158,33 +147,20 @@ window.onload = function () {
         })
 
 
-<<<<<<< HEAD
         //获取市，镇的函数
-=======
-
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
         function location_city(index) {
             $('.city2').html('')
             var val = ''
             if (typeof (settings.url) == "string") {
                 $.getJSON(settings.url, function (json) {
                     city_json = json;
-<<<<<<< HEAD
-
-=======
-                  
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
                     $.each(city_json.citylist[index].c, function (i, item) {
                         var html1 = '';
                         html1 += `<li><a href="javascript:;">${item.n}</a></li>`
                         $('.city2').append(html1);
                     })
 
-<<<<<<< HEAD
                     $('.city2').on('click', 'li', function () {
-=======
-                    $('.city2').on('click','li',function(){
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
                         var index1 = $(this).index()
                         var html2 = $(this).children().html();
                         $('.city-item2').html(html2);
@@ -195,14 +171,8 @@ window.onload = function () {
                             $('.city2').css({
                                 'display': 'none'
                             });
-<<<<<<< HEAD
                             $('.city-item3').addClass('cur').siblings()
                                 .removeClass('cur');
-=======
-
-                            $('.city-item3').addClass('cur').siblings()
-                            .removeClass('cur');
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
 
                             $('.qu').css({
                                 'display': 'block'
@@ -211,11 +181,7 @@ window.onload = function () {
                         })
                     })
 
-<<<<<<< HEAD
                     $('.qu').on('click', 'li', function () {
-=======
-                    $('.qu').on('click','li',function(){
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
                         var html3 = $(this).children().html();
                         $('.city-item3').html(html3);
                         $('.dizhi').append(html3)
@@ -224,22 +190,6 @@ window.onload = function () {
             }
         }
 
-<<<<<<< HEAD
-=======
-        
-        // location_qu()
-        // function location_qu(){
-        //     if (typeof (settings.url) == "string") {
-        //         $.getJSON(settings.url, function (json) {
-        //             city_json = json;
-        //             $.each(city_json.citylist.c, function (i, item) {
-        //                 console.log(item.a)
-        //             })
-        //         });
-        //     }
-        // }
-        //----------------------------------------------------
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
         //-------------------地址位置选取事件---------------------
         $('.top_location').hover(function () {
             $('.city_wrap').css({
@@ -260,7 +210,6 @@ window.onload = function () {
                 'display': 'none'
             })
         })
-<<<<<<< HEAD
         //---------------------------结束---------------------------------
         //--------购物车的指向事件-------------开始------------------------
         $('.header-cart-a').hover(function () {
@@ -566,6 +515,7 @@ window.onload = function () {
             'left': 0,
             'top': 0
         });
+
         function carousel(cur) {
 
             $(".img-box >li")
@@ -610,7 +560,7 @@ window.onload = function () {
             'img4': '1_4.jpg',
             'img5': '1_5.jpg',
         }];
-        var list = document.getElementById('troika');//获取节点
+        var list = document.getElementById('troika'); //获取节点
         var reslist = troika.map(function (item4) {
             return ` <div class="troika-list margin-right" data-id:"${item4.id}">
         <div class="troika_title">
@@ -663,58 +613,59 @@ window.onload = function () {
             </div>
         </div>
     </div>`
-        }).join('');//转化出字符串代码
-       list.innerHTML = reslist;//渲染
-       //---------------------------结束---------------------------------
-       //基友派数据渲染开始----------------------------------------
-       
-       var floor = [{
-        'id': 1,
-        'color': '#4fb99f',
-        'logoimg': '手机1F.png',
-        'img1': 'floor1_1.png',
-        'img2': 'floor1_2.jpg',
-        'img3': 'floor1_3.jpg',
-        
-    }, {
-        'id': 2,
-        'color': '#f29600',
-        'logoimg': '2F.png',
-        'img1': 'floor1_1.png',
-        'img2': 'floor1_2.jpg',
-        'img3': 'floor1_3.jpg',
-    }, {
-        'id': 3,
-        'color': '#e73828',
-        'logoimg': '3F.png',
-        'img1': 'floor1_1.png',
-        'img2': 'floor1_2.jpg',
-        'img3': 'floor1_3.jpg',
-    },
-    {
-        'id': 4,
-        'color': '#c43d7e',
-        'logoimg': '4F.png',
-        'img1': 'floor1_1.png',
-        'img2': 'floor1_2.jpg',
-        'img3': 'floor1_3.jpg',
-    }, {
-        'id': 5,
-        'color': '#6d55bd',
-        'logoimg': '5F.png',
-        'img1': 'floor1_1.png',
-        'img2': 'floor1_2.jpg',
-        'img3': 'floor1_3.jpg',
-    }, {
-        'id': 6,
-        'color': '#325bb5',
-        'logoimg': '6F.png',
-        'img1': 'floor1_1.png',
-        'img2': 'floor1_2.jpg',
-        'img3': 'floor1_3.jpg',
-    }];
-    var floorlist = floor.map(function(item5){
-        return `<div data-id="${item5.id}" class="diy-floor">
+        }).join(''); //转化出字符串代码
+        list.innerHTML = reslist; //渲染
+        //---------------------------结束---------------------------------
+        //基友派数据渲染开始----------------------------------------
+
+        var floor = [{
+                'id': 1,
+                'color': '#4fb99f',
+                'logoimg': '手机1F.png',
+                'img1': 'floor1_1.png',
+                'img2': 'floor1_2.jpg',
+                'img3': 'floor1_3.jpg',
+
+            }, {
+                'id': 2,
+                'color': '#f29600',
+                'logoimg': '2F.png',
+                'img1': 'floor1_1.png',
+                'img2': 'floor1_2.jpg',
+                'img3': 'floor1_3.jpg',
+            }, {
+                'id': 3,
+                'color': '#e73828',
+                'logoimg': '3F.png',
+                'img1': 'floor1_1.png',
+                'img2': 'floor1_2.jpg',
+                'img3': 'floor1_3.jpg',
+            },
+            {
+                'id': 4,
+                'color': '#c43d7e',
+                'logoimg': '4F.png',
+                'img1': 'floor1_1.png',
+                'img2': 'floor1_2.jpg',
+                'img3': 'floor1_3.jpg',
+            }, {
+                'id': 5,
+                'color': '#6d55bd',
+                'logoimg': '5F.png',
+                'img1': 'floor1_1.png',
+                'img2': 'floor1_2.jpg',
+                'img3': 'floor1_3.jpg',
+            }, {
+                'id': 6,
+                'color': '#325bb5',
+                'logoimg': '6F.png',
+                'img1': 'floor1_1.png',
+                'img2': 'floor1_2.jpg',
+                'img3': 'floor1_3.jpg',
+            }
+        ];
+        var floorlist = floor.map(function (item5) {
+            return `<div data-id="${item5.id}" id="diy-floor1" class="diy-floor">
         <div class="floor-title">
             <a href="" width="1200" height="54">
                 <img class="get-src" src="img/${item5.logoimg}" width="1200" height="54">
@@ -878,45 +829,45 @@ window.onload = function () {
             <div class="link-bg" style="background:${item5.color}"></div>
         </div>
     </div>`
-    }).join('');
-    var floorbox = document.getElementById('floor-box')
-    // console.log(floorbox)
-    floorbox.innerHTML = floorlist;
-    //---------------------------结束---------------------------------
-    //更多好货------------渲染数据----------开始-----------------------
-    var moredata = [{
-        'id': 1,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 2,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 3,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 4,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 5,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 6,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 7,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 8,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 9,
-        'moreimg':'more1.jpg',
-    },{
-        'id': 10,
-        'moreimg':'more1.jpg',
-    }];
-    var morelist1= moredata.map(function(item6){
-        return ` <li class="anim-top" data-id="${item6.id}">
+        }).join('');
+        var floorbox = document.getElementById('floor-box')
+        // console.log(floorbox)
+        floorbox.innerHTML = floorlist;
+        //---------------------------结束---------------------------------
+        //更多好货------------渲染数据----------开始-----------------------
+        var moredata = [{
+            'id': 1,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 2,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 3,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 4,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 5,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 6,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 7,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 8,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 9,
+            'moreimg': 'more1.jpg',
+        }, {
+            'id': 10,
+            'moreimg': 'more1.jpg',
+        }];
+        var morelist1 = moredata.map(function (item6) {
+            return ` <li class="anim-top" data-id="${item6.id}">
         <a href="">
             <span class="goodimg">
                 <img src="img/${item6.moreimg}">
@@ -925,19 +876,60 @@ window.onload = function () {
             <p class="red">￥28</p>
         </a>
     </li>`
-    }).join('');
-    var morebox = document.getElementById('morelist');
-    morebox.innerHTML = morelist1;
-    //---------------------------结束---------------------------------
-    
-=======
-
-        //城市选择事件
-
-
-
->>>>>>> c7d1ca25d767eef6490e466cb9bd0fc480f7ce83
+        }).join('');
+        var morebox = document.getElementById('morelist');
+        morebox.innerHTML = morelist1;
+        //---------------------------结束---------------------------------
+        //左侧回到顶部功能
+        var a = $('.pelate'),
+            b = a.offset();
+        // console.log(b)//返回或设置导航栏相对于文档的偏移(位置)
+        //加个屏幕滚动事件，c是滚动条相当于文档最顶端的距离
+        $(document).on('scroll', function () {
+            var c = $(document).scrollTop();
+            // //当滚动的屏幕距离大于等于导航栏本身离最顶端的距离时（判断条件）给它加样式（根据自己业务的条件加样式，一般如下）*／
+            if (b.top <= c) {
+                $('.diy-elevator').fadeIn(100); //回到顶部淡出
+            } else {
+                $('.diy-elevator').fadeOut(100); //回到顶部淡隐
+            }
+        })
+        //回到顶部的点击事件
+        $('#go-top').click(function () {
+            $('html,body').animate({
+                scrollTop: 0
+            }, 500);
+        })
     })
+    //楼层跳跃特效
+    var oNav = $('.diy-elevator'); //导航壳
+    var aNav = oNav.find('a'); //导航
+    var aDiv = $('#homebox #diy-floor1'); //楼层
+    
+    $(window).scroll(function () {
+        //可视窗口高度
+        var winH = $(window).height();
+        //鼠标滚动的距离
+        var iTop = $(window).scrollTop();
+        
+        aDiv.each(function () {
+            if (winH + iTop - $(this).offset().top+499> winH / 2) {
+                aNav.removeClass('active1');
+                console.log(aDiv.lengt)
+                aNav.eq($(this).index()).addClass('active1');
+            }
+            
+        })
+    })
+    //点击回到当前楼层
+    aNav.click(function () {
+        var t = aDiv.eq($(this).index()).offset().top;
+        $('body,html').animate({
+            "scrollTop": t
+        }, 500);
+        $(this).addClass('active1').siblings().removeClass('active1');
+    });
+    
 
 
 }
