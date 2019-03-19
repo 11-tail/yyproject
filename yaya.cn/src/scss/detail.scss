@@ -15,12 +15,15 @@
 .overflow-hide {
     overflow: hidden;
 }
+
 .pointer {
     cursor: pointer;
 }
+
 .flex-align-center {
     align-items: center;
 }
+
 /* 头部的样式 */
 .top {
     height: 30px;
@@ -259,7 +262,7 @@
     background: #fff;
     border: solid 1px #dfdfdf;
     background: #fff;
-    left: 159.6px;
+    left: 55.6px;
     top: 30px;
 }
 
@@ -284,17 +287,20 @@
 .city_wrap .city-hot {
     padding: 0 10px;
     margin-top: 15px;
-    
+
 }
+
 .city_wrap .city-hot a {
     margin-right: 10px;
 }
+
 .city_wrap .city-tab {
     margin: 10px;
     border-bottom: solid 2px #4FB99F;
     height: 30px;
     line-height: 30px;
 }
+
 .city_wrap .city-tab a {
     display: inline-block;
     padding: 0 20px;
@@ -306,8 +312,9 @@
     font-family: 'Microsoft YaHei';
     text-decoration: none;
 }
+
 /* 点击是给选择框添加这个class名 */
-.cur{
+.cur {
     color: #4FB99F;
     border: solid 2px #4FB99F !important;
     border-bottom: 0 !important;
@@ -315,11 +322,13 @@
     font-weight: bold;
     height: 30px !important;
 }
+
 /* --------------------------------- */
-.city-box{
+.city-box {
     margin: 10px;
 }
-.city-box ul li{
+
+.city-box ul li {
     float: left;
     height: 25px;
     line-height: 25px;
@@ -327,22 +336,26 @@
     width: 80px;
     overflow: hidden;
 }
-.city-box ul li a{
+
+.city-box ul li a {
     display: inline-block;
     padding: 0 4px;
     height: 25px;
     line-height: 25px;
 }
-.city-box ul li a:hover{
+
+.city-box ul li a:hover {
     background: #f3f3f3;
     color: #4FB99F;
     text-decoration: none;
 }
+
 //---------------------------------------------
 .head {
     height: 145px;
     background: none;
     border-bottom: 2px solid #4fb99f;
+
     //logo的样式
     .logo-box {
         width: 220px;
@@ -429,6 +442,7 @@
                 text-decoration: none;
                 position: relative;
                 z-index: 95;
+
                 span {
                     padding: 0 3px;
                     background: #4FB99F;
@@ -471,10 +485,12 @@
     background: none;
     margin-top: -45px;
     height: 45px;
-    .fenlei{
+
+    .fenlei {
         width: 220px;
         height: 45px;
-        h4{
+
+        h4 {
             position: absolute;
             top: 0;
             left: 0;
@@ -490,6 +506,7 @@
             line-height: 45px;
         }
     }
+
     .nav {
         margin-left: 230px;
         margin-top: -45px;
@@ -557,9 +574,11 @@
         left: 0;
         z-index: 91;
         display: none;
+
         .cur3 {
             background: rgba(51, 51, 51, .5);
         }
+
         dl {
 
 
@@ -712,27 +731,539 @@
 }
 
 //结束--------------------------------------------------
-.breadcrumb{
+//主体样式开始----------------------------------------------
+.breadcrumb {
     height: 40px;
     line-height: 40px;
-    .dizhi{
+
+    .dizhi {
         width: 14px;
         height: 30px;
         background: url(../css/img/weizhi.png) no-repeat center;
         float: left;
         margin-right: 6px;
-        margin-top:5px;
+        margin-top: 5px;
     }
-    i{
+
+    i {
         color: #bebebe;
         margin: 0 8px;
         font-size: 10px;
     }
 
 }
+
 .flex {
     display: flex;
 }
+
 .flex-justify-between {
     justify-content: space-between;
+}
+
+.flex-align-center {
+    align-items: center;
+}
+
+.flex-child-noshrink {
+    flex-shrink: 0;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-child-grow {
+    flex-grow: 1;
+}
+
+.flex-child-noshrink {
+    flex-shrink: 0;
+}
+
+.flex-child-noshrink {
+    flex-shrink: 0;
+}
+
+.red,
+a.red {
+    color: #e73828;
+}
+
+.grey-9,
+a.grey-9 {
+    color: #9c9c9c;
+}
+
+.main-bgcolor {
+    background-color: #4fb99f;
+}
+
+.white,
+a.white {
+    color: #fff;
+}
+
+.main-color,
+a.main-color {
+    color: #4fb99f;
+}
+
+.font-12 {
+    font-size: 12px;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.font-14 {
+    font-size: 14px;
+}
+
+.flex-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+
+.margin-left {
+    margin-left: 10px;
+}
+
+.border {
+    border: 1px solid #dfdfdf;
+}
+
+.border-bottom,
+.border-left,
+.border-right,
+.border-top {
+    position: relative;
+    border: 0;
+}
+
+strong,
+b {
+    font-weight: bold;
+}
+
+.mt-5 {
+    margin-top: 5px;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
+}
+
+.lines-1 {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    word-break: break-all;
+    -webkit-line-clamp: 1;
+}
+
+//主体左侧样式
+.box-title {
+    height: 35px;
+    background: #f3f3f3;
+    border-bottom: 1px solid #dfdfdf;
+    line-height: 35px;
+    padding: 0 10px;
+    font-size: 14px;
+    text-shadow: 0 1px 0 #fff;
+
+}
+
+.left-side {
+    width: 220px;
+
+    .cate-tree {
+
+
+        dl {
+            dt {
+                height: 35px;
+                background: #f3f3f3;
+                padding: 0 10px 0 20px;
+
+                a {
+                    color: #4fb99f;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
+    .box-title {
+        height: 35px;
+        background: #f3f3f3;
+        border-bottom: 1px solid #dfdfdf;
+        line-height: 35px;
+        padding: 0 10px;
+        font-size: 14px;
+        text-shadow: 0 1px 0 #fff;
+    }
+
+    .lines-2 {
+        -webkit-line-clamp: 2;
+        display: -webkit-box;
+        height: 3em;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        word-break: break-all;
+    }
+
+    .guess {
+        margin-top: 10px;
+
+        .box-title {
+            height: 35px;
+            background: #f3f3f3;
+            border-bottom: 1px solid #dfdfdf;
+            line-height: 35px;
+            padding: 0 10px;
+            font-size: 14px;
+            text-shadow: 0 1px 0 #fff;
+        }
+
+        .guess-item {
+            padding: 10px;
+            border-bottom: 1px solid #dfdfdf;
+
+
+        }
+    }
+
+    .new {
+        margin-top: 10px;
+
+        .new-item {
+            padding: 10px;
+            overflow: hidden;
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
+.ml-5 {
+    margin-left: 5px;
+}
+
+.right-side {
+    width: 960px;
+
+    .screening-title {
+        width: 100px;
+        line-height: 40px;
+        height: 40px;
+        padding-left: 20px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        display: block;
+    }
+
+    .screening-box {
+        .screening-item {
+            .screening-option {
+                padding: 14px 20px 14px 3px;
+                position: relative;
+                border-bottom: 1px dashed #dfdfdf;
+                min-height: 30px;
+                margin-bottom: -1px;
+                width: 858px;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+
+                .brand-item {
+                    width: 105px;
+                    height: 45px;
+                    padding: 0;
+                    margin: -1px 0 0 -1px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    border: 1px solid #dfdfdf;
+                    line-height: 24px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+
+                a {
+                    padding: 0 5px;
+                    margin: 8px 3px 0;
+                    display: inline-block;
+                    height: 24px;
+                    line-height: 24px;
+                }
+            }
+        }
+    }
+
+    .sort-bar {
+        height: 40px;
+        background: #f3f3f3;
+        margin-top: 10px;
+        border: 1px solid #dfdfdf;
+
+        .sort {
+            .sort-item {
+                padding: 0 20px;
+                border-right: 1px solid #dfdfdf;
+
+                .sort-item-text {
+                    color: #4fb99f;
+                }
+            }
+        }
+
+        .in-stock {
+            padding-left: 10px;
+
+            .el-checkbox {
+                color: #6b6b6b;
+                font-weight: 500;
+                font-size: 14px;
+                position: relative;
+                cursor: pointer;
+                display: inline-block;
+                white-space: nowrap;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                .el-checkbox__input {
+                    white-space: nowrap;
+                    cursor: pointer;
+                    outline: none;
+                    display: inline-block;
+                    line-height: 1;
+                    position: relative;
+                    vertical-align: middle;
+
+                    .el-checkbox__inner {
+                        display: inline-block;
+                        position: relative;
+                        border: 1px solid #dcdfe6;
+                        border-radius: 2px;
+                        -webkit-box-sizing: border-box;
+                        box-sizing: border-box;
+                        width: 14px;
+                        height: 14px;
+                        background-color: #fff;
+                        z-index: 1;
+                        -webkit-transition: border-color .25s cubic-bezier(.71, -.46, .29, 1.46), background-color .25s cubic-bezier(.71, -.46, .29, 1.46);
+                        transition: border-color .25s cubic-bezier(.71, -.46, .29, 1.46), background-color .25s cubic-bezier(.71, -.46, .29, 1.46);
+                    }
+
+                    .el-checkbox__inner:after {
+                        -webkit-box-sizing: content-box;
+                        box-sizing: content-box;
+                        content: "";
+                        border: 1px solid #fff;
+                        border-left: 0;
+                        border-top: 0;
+                        height: 7px;
+                        left: 4px;
+                        position: absolute;
+                        top: 1px;
+                        -webkit-transform: rotate(45deg) scaleY(0);
+                        transform: rotate(45deg) scaleY(0);
+                        width: 3px;
+                        -webkit-transition: -webkit-transform .15s ease-in .05s;
+                        transition: -webkit-transform .15s ease-in .05s;
+                        transition: transform .15s ease-in .05s;
+                        transition: transform .15s ease-in .05s, -webkit-transform .15s ease-in .05s;
+                        -webkit-transform-origin: center;
+                        transform-origin: center;
+                    }
+
+                    .el-checkbox__original {
+                        opacity: 0;
+                        outline: none;
+                        position: absolute;
+                        margin: 0;
+                        width: 0;
+                        height: 0;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+
+        .price-section {
+            input {
+                width: 50px;
+                height: 25px;
+                border: 1px solid #ccc;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                margin: 0 2px;
+                text-align: center;
+            }
+        }
+
+
+    }
+
+    .list {
+        .lines-2 {
+            -webkit-line-clamp: 2;
+            display: block;
+            display: -webkit-box;
+            height: 3em;
+        }
+
+        .lines-1,
+        .lines-2 {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            -webkit-box-orient: vertical;
+            word-break: break-all;
+        }
+
+        ul {
+            li {
+                width: 200px;
+                margin: 7px;
+                padding: 10px;
+                height: 378px;
+                border: 3px solid transparent;
+                -webkit-transition: all .3s;
+                -o-transition: all .3s;
+                transition: all .3s;
+                position: relative;
+
+                .main-pic-link {
+                    display: block;
+                    width: 200px;
+                    height: 200px;
+                    position: relative;
+
+                }
+
+                .sku-color {
+                    a {
+                        display: block;
+                        width: 34px;
+                        height: 34px;
+                        border: 1px solid #dfdfdf;
+                        margin-right: 4px;
+
+                        img {
+                            width: 34px;
+                            height: 34px;
+                        }
+
+                        &:hover {
+                            border-color: #4fb99f;
+                        }
+                    }
+                }
+
+                .main-pic {
+                    width: 200px;
+                    height: 200px;
+                }
+
+                &:hover {
+                    border-color: #dfdfdf;
+                }
+
+            }
+        }
+    }
+}
+
+//跳页样式开始
+.el-pagination {
+    white-space: nowrap;
+    padding: 2px 5px;
+    color: #333;
+    font-weight: 700;
+
+    .active {
+        background-color: #4fb99f;
+        color: #fff;
+    }
+
+    span {
+        display: inline-block;
+        font-size: 13px;
+        min-width: 35.5px;
+        height: 28px;
+        line-height: 28px;
+        vertical-align: top;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin-right: 10px;
+        font-weight: 400;
+        color: #6b6b6b;
+    }
+
+    button {
+        display: inline-block;
+        font-size: 13px;
+        height: 28px;
+        line-height: 28px;
+        vertical-align: top;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+
+    .btn-prev,
+    .btn-next {
+        color: #b0b0b0;
+        margin: 0 5px;
+        background-color: #f5f5f5;
+        color: #6b6b6b;
+        min-width: 30px;
+        border-radius: 2px;
+    }
+
+
+}
+
+.el-pager {
+    user-select: none;
+    list-style: none;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    padding: 0;
+    margin: 0;
+
+    li {
+        margin: 0 5px;
+        background-color: #f5f5f5;
+        color: #6b6b6b;
+        min-width: 30px;
+        border-radius: 2px;
+        padding: 0 4px;
+        vertical-align: top;
+        display: inline-block;
+        font-size: 13px;
+        height: 28px;
+        line-height: 28px;
+        cursor: pointer;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        text-align: center;
+    }
 }
