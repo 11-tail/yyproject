@@ -2,15 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″>
     <meta charset="UTF-8">
-    <title>【手机】手机报价-丫丫网 - 丫丫网</title>
+    <title>详情页模板</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../scss/detail.css">
+    <link rel="stylesheet" href="../scss/detailPages.css">
     <link rel="stylesheet" href="../iconfont/iconfont.css">
     <script src="../js/common.js"></script>
     <script src="../js/jquery-1.10.1.min.js"></script>
-    <script src="../js/detail.js"></script>
+    <script src="../js/detailPages.js"></script>
     <script src="../lib/city/jquery.cityselect.js"></script>
 </head>
 
@@ -1659,347 +1658,395 @@
             </div>
         </div>
     </div>
-    <!-- 主体开始 -->
-    <div class="container relative">
-        <div class="breadcrumb flex flex-align-center">
-            <b class="dizhi"></b>
-            <a href="/">首页</a>
-            <i>/</i>
-            <a href="">手机通讯</a>
-            <i>/</i>
-            <span>手机</span>
-        </div>
-        <!-- 开始了！！！！！！！！！ -->
-        <div class="flex flex-justify-between">
-            <!-- 左侧 -->
-            <div class="left-side flex-child-noshrink">
-                <div class="cate-tree border">
-                    <h4 class="box-title">手机通讯</h4>
-                    <dl class="border-bottom">
-                        <dt class="flex flex-justify-between flex-align-center">
-                            <a href="" class="phone">
-                                手机
-                            </a>
-                        </dt>
-                    </dl>
-                    <dl class="border-bottom">
-                        <dt class="flex flex-justify-between flex-align-center">
-                            <a href="" class="phone" style="color:#333">
-                                手机配件
-                            </a>
-                        </dt>
-                    </dl>
+    <!-- 主体开始！！！！！！！！！！！ -->
+    <div class="view">
+        <div class="container margin-top">
+            <div class="breadcrumb flex flex-align-center">
+                <b class="dizhi"></b>
+                <a href="/">首页</a>
+                <i>/</i>
+                <a href="">手机通讯</a>
+                <i>/</i>
+                <span>手机</span>
+            </div>
+            <!-- 详情部分 -->
+            <div class="product-intro clearfix margin-bottom">
+                <div class="preview-wrap fl">
+                    <!-- 放大镜盒子 -->
+                    <div class="zoomer-zoomer-box">
+                        <div class="preview-box" id="previewbox">
+                            <img src="../img/liebiao/list1-1.jpg" style="display:block;" alt="" class="preview-image img">
+                            <img src="../img/liebiao/list1-2.jpg" alt="" class="preview-image img">
+                            <img src="../img/liebiao/list1-3.jpg" alt="" class="preview-image img">
+                            <img src="../img/liebiao/list1-4.jpg" alt="" class="preview-image img">
+                            <div id="move"></div>
+                        </div>
+                        <div class="control-box">
+                            <!-- z左箭头 -->
+                            <div class="control">
+                                <span>
+                                    《</span> </div> <!-- 轮播小图片 -->
+                            <div class="thumb-list" id="thumblist">
+                                <div class="thumb-item">
+                                    <img src="../img/liebiao/list1-1.jpg" alt="" class="choosed-thumb" id="1">
+                                </div>
+                                <div class="thumb-item">
+                                    <img src="../img/liebiao/list1-2.jpg" alt="" class="choosed-thumb" id="2">
+                                </div>
+                                <div class="thumb-item">
+                                    <img src="../img/liebiao/list1-3.jpg" alt="" class="choosed-thumb" id="3">
+                                </div>
+                                <div class="thumb-item">
+                                    <img src="../img/liebiao/list1-4.jpg" alt="" class="choosed-thumb" id="4">
+                                </div>
+                            </div>
+                            <!-- 右箭头 -->
+                            <div class="control">
+                                <span>></span>
+                            </div>
+                        </div>
+                        <!-- 放大镜的盒子 -->
+                        <div id="zoomer-pane-container" class="pane-container" style="width: 402px;height: 402px;left: 450px;top: 0px;"></div>
+                    </div>
+
+                    <div style="margin-bottom: 25px">
+                        <div class="social-share">
+                            <span style="font-size: 14px;">分享：</span>
+                            <a href="" class="social-share-icon">放</a>
+                            <a href="" class="social-share-icon">图</a>
+                            <a href="" class="social-share-icon">标</a>
+                            <a href="" class="social-share-icon">的</a>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="guess border">
-                    <h4 class="box-title">浏览了最终购买了</h4>
-                    <a href="" class="flex guess-item">
-                        <img src="../img/guess1-1.jpg" alt="" height="70" width="70" class="flex-child-noshrink lazy-img">
-                        <div class="flex-child-grow flex flex-col flex-justify-between">
-                            <p class="lines-2">三星 Galaxy S10 (SM-G9730) 全网通版</p>
-                            <p class="red font-14">￥5999.00</p>
+                <!-- 右侧的详情 -->
+                <div class="info-wrap">
+                    <div class="params-wrapper padding-bottom" style="border-bottom: 1px dotted #dfdfdf;">
+                        <!--  -->
+                        <div class="procuct-name">
+                            <div class="flex flex-justify-between flex-align-center mb-5">
+                                <h2 class="font-16"><b><span>臭阿夸 深空灰 6GB+128GB </span></b></h2>
+                                <div class="product-title-icon">
+                                    <a href="">手机浏览</a>
+                                    <a href="">联系客服</a>
+                                </div>
+                            </div>
+                            <p class="main-color procuct-tip margin-bottom lines-1"><span>【新品热销】全球首批量产骁龙855，索尼4800万超广角微距三摄，全球首款20W无线闪充,第5代极速屏下指纹解锁！</span></p>
                         </div>
-                    </a>
-                    <a href="" class="flex guess-item">
-                        <img src="../img/guess1-1.jpg" alt="" height="70" width="70" class="flex-child-noshrink lazy-img">
-                        <div class="flex-child-grow flex flex-col flex-justify-between">
-                            <p class="lines-2">三星 Galaxy S10 (SM-G9730) 全网通版</p>
-                            <p class="red font-14">￥5999.00</p>
+                        <!--  -->
+                        <div class="product-price relative">
+                            <div class="param-wrapper flex margin-left flex-align-center">
+                                <div class="param-title flex flex-justify-between margin-right"><span>丫</span><span>丫</span><span>价：</span></div>
+                                <div class="full-width flex flex-align-center">
+                                    <div class="pointer ant-popover-open"><span class="font-18 red">¥<b class="font-22" id="yunprice">2999.00</b></span></div>
+                                    <div><a href="javascript:;" class="ml-5 grey-6">[价格走势]</a></div>
+                                    <div><a href="javascript:;" class="ml-5 grey-6">[降价通知]</a></div>
+                                </div>
+                            </div>
+                            <ul class="flex product-comment">
+                                <li class="flex flex-col"><a href="">用户评价</a><span>4</span></li>
+                                <li class="flex flex-col"><a href="">商品咨询</a><span>4</span></li>
+                                <li class="flex flex-col"><a href="">好评率</a><span>4</span></li>
+                            </ul>
                         </div>
-                    </a>
-                    <a href="" class="flex guess-item">
-                        <img src="../img/guess1-1.jpg" alt="" height="70" width="70" class="flex-child-noshrink lazy-img">
-                        <div class="flex-child-grow flex flex-col flex-justify-between">
-                            <p class="lines-2">三星 Galaxy S10 (SM-G9730) 全网通版</p>
-                            <p class="red font-14">￥5999.00</p>
+                        <!-- 配置信息 -->
+                        <div class="product-sku margin-top">
+                            <div class="param-wrapper flex flex-align-start margin-left margin-bottom">
+                                <div class="param-title flex flex-justify-between margin-right"><span>配</span><span>置</span><span>信</span><span>息：</span></div>
+                                <div class="param-content full-width"><span class="main-color">充电器x1，数据线x1，耳机转接线x1，保护壳x1（内置3300mAh电池）</span></div>
+                            </div>
+                            <div class="param-wrapper flex flex-align-start margin-left margin-bottom">
+                                <div class="param-title flex flex-justify-between margin-right"><span>颜</span><span>色：</span></div>
+                                <div class="param-content full-width">
+                                    <div class="radio-wrapper flex flex-wrap">
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <img src="../img/liebiao/list1-1.jpg" alt="">
+                                            <span>深空灰</span>
+                                        </a>
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <img src="../img/liebiao/list1-1.jpg" alt="">
+                                            <span>深空灰</span>
+                                        </a>
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <img src="../img/liebiao/list1-1.jpg" alt="">
+                                            <span>深空灰</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="param-wrapper flex flex-align-start margin-left margin-bottom">
+                                <div class="param-title flex flex-justify-between margin-right"><span>容</span><span>量：</span></div>
+                                <div class="param-content full-width">
+                                    <div class="radio-wrapper flex flex-wrap">
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <span>6GB+128GB</span>
+                                        </a>
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <span>6GB+128GB</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="param-wrapper flex flex-align-start margin-left margin-bottom">
+                                <div class="param-title flex flex-justify-between margin-right"><span>版</span><span>本：</span></div>
+                                <div class="param-content full-width">
+                                    <div class="radio-wrapper flex flex-wrap">
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <span>臭阿夸</span>
+                                        </a>
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <span>小米9 4G+全网通版</span>
+                                        </a>
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <span>小米9 SE 全网通版</span>
+                                        </a>
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <span>小米9 透明尊享版</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--  -->
+                            <div class="param-wrapper flex flex-align-start margin-left margin-bottom">
+                                <div class="param-title flex flex-justify-between margin-right"><span>容</span><span>量：</span></div>
+                                <div class="param-content full-width">
+                                    <div class="radio-wrapper flex flex-wrap">
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <span>官方标配</span>
+                                        </a>
+                                        <a href="" class="margin-bottom radio-item checked">
+                                            <span>推荐套餐</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </a>
-                    <a href="" class="flex guess-item">
-                        <img src="../img/guess1-1.jpg" alt="" height="70" width="70" class="flex-child-noshrink lazy-img">
-                        <div class="flex-child-grow flex flex-col flex-justify-between">
-                            <p class="lines-2">三星 Galaxy S10 (SM-G9730) 全网通版</p>
-                            <p class="red font-14">￥5999.00</p>
+                    </div>
+                    <!-- 配送至？ -->
+                    <div class="param-wrapper flex flex-align-start margin-left" style="margin:20px 0;border-bottom: 1px dotted #dfdfdf;">
+                        <div class="param-wrapper flex flex-align-start margin-left margin-bottom">
+                            <div class="param-title flex flex-justify-between margin-right"><span>配</span><span>送</span><span>至：</span></div>
+                            <div class="param-content full-width">
+                                <a href="" class="info-box border grey-6">广东省广州市天河区(<span class="main-color">大仓缺货</span>)<i
+                                        class="triangle-down"></i></a>
+                            </div>
                         </div>
-                    </a>
-                    <a href="" class="flex guess-item">
-                        <img src="../img/guess1-1.jpg" alt="" height="70" width="70" class="flex-child-noshrink lazy-img">
-                        <div class="flex-child-grow flex flex-col flex-justify-between">
-                            <p class="lines-2">三星 Galaxy S10 (SM-G9730) 全网通版</p>
-                            <p class="red font-14">￥5999.00</p>
+                    </div>
+                    <!-- 碎屏险 -->
+                    <div class="param-wrapper flex flex-align-start margin-left" style="margin:20px 0;border-bottom: 1px dotted #dfdfdf;">
+                        <div class="param-wrapper flex flex-align-start margin-left margin-bottom">
+                            <div class="param-title flex flex-justify-between margin-right"><span>丫</span><span>丫</span><span>服</span><span>务：</span></div>
+                            <div class="param-content full-width">
+                                <div class="radio-wrapper flex flex-wrap">
+                                    <a href="" class="margin-bottom radio-item checked">
+                                        <span class="block ml-5" data-v-775eaa16="">电池保 2年 </span>
+                                        <span class="block ml-5" data-v-775eaa16="">¥69</span>
+                                    </a>
+                                    <a href="" class="margin-bottom radio-item checked">
+                                        <span class="block ml-5" data-v-775eaa16="">电池保 2年 </span>
+                                        <span class="block ml-5" data-v-775eaa16="">¥69</span>
+                                    </a>
+                                    <a href="" class="margin-bottom radio-item checked">
+                                        <span class="block ml-5" data-v-775eaa16="">电池保 2年 </span>
+                                        <span class="block ml-5" data-v-775eaa16="">¥69</span>
+                                    </a>
+                                    <a href="" class="margin-bottom radio-item checked">
+                                        <span class="block ml-5" data-v-775eaa16="">电池保 2年 </span>
+                                        <span class="block ml-5" data-v-775eaa16="">¥69</span>
+                                    </a>
+                                </div>
+                                <div class="flex flex-justify-between padding-top"><span class="grey-9 ">据统计有46.7%的手机在质保期内会因为意外失去保修，为此60%以上丫丫网客户选择了丫丫服务</span><a
+                                        href="" target="_blank" title="查看丫丫服务详情" class="link">详情</a></div>
+                            </div>
                         </div>
-                    </a>
-                    <a href="" class="flex guess-item">
-                        <img src="../img/guess1-1.jpg" alt="" height="70" width="70" class="flex-child-noshrink lazy-img">
-                        <div class="flex-child-grow flex flex-col flex-justify-between">
-                            <p class="lines-2">三星 Galaxy S10 (SM-G9730) 全网通版</p>
-                            <p class="red font-14">￥5999.00</p>
+                    </div>
+                    <div class="btn-wrap">
+                        <div class="param-wrapper flex flex-align-start margin-left">
+                            <div class="param-content full-width">
+                                <div class="margin-top">
+                                    <div class="product-btn  big grey-f-bg">
+                                        加入购物车
+                                    </div>
+                                    <div class="product-btn  grey-f-bg">
+                                        以旧换新
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </a>
-                </div>
-                <div class="new border">
-                    <h4 class="box-title">最新上架商品</h4>
-                    <a href="" class="new-item flex flex-col flex-center">
-                        <img src="../img/guess1-2.jpg" width="160" height="160" class="lazy-img flex-child-noshrink">
-                        <p class="red font-14">￥3090.00</p>
-                        <p class="lines-2">华为 nova 4 （VCE-TL00）4G+全网通标配版</p>
-                    </a>
-                    <a href="" class="new-item flex flex-col flex-center">
-                        <img src="../img/guess1-2.jpg" width="160" height="160" class="lazy-img flex-child-noshrink">
-                        <p class="red font-14">￥3090.00</p>
-                        <p class="lines-2">华为 nova 4 （VCE-TL00）4G+全网通标配版</p>
-                    </a>
-                    <a href="" class="new-item flex flex-col flex-center">
-                        <img src="../img/guess1-2.jpg" width="160" height="160" class="lazy-img flex-child-noshrink">
-                        <p class="red font-14">￥3090.00</p>
-                        <p class="lines-2">华为 nova 4 （VCE-TL00）4G+全网通标配版</p>
-                    </a>
-                    <a href="" class="new-item flex flex-col flex-center">
-                        <img src="../img/guess1-2.jpg" width="160" height="160" class="lazy-img flex-child-noshrink">
-                        <p class="red font-14">￥3090.00</p>
-                        <p class="lines-2">华为 nova 4 （VCE-TL00）4G+全网通标配版</p>
-                    </a>
-                    <a href="" class="new-item flex flex-col flex-center">
-                        <img src="../img/guess1-2.jpg" width="160" height="160" class="lazy-img flex-child-noshrink">
-                        <p class="red font-14">￥3090.00</p>
-                        <p class="lines-2">华为 nova 4 （VCE-TL00）4G+全网通标配版</p>
-                    </a>
-                    <a href="" class="new-item flex flex-col flex-center">
-                        <img src="../img/guess1-2.jpg" width="160" height="160" class="lazy-img flex-child-noshrink">
-                        <p class="red font-14">￥3090.00</p>
-                        <p class="lines-2">华为 nova 4 （VCE-TL00）4G+全网通标配版</p>
-                    </a>
+                    </div>
                 </div>
             </div>
-            <!-- 右侧 -->
-            <div class="right-side">
-                <div class="border">
-                    <div class="box-title flex">
-                        <b class="main-color font-16">手机</b>
-                        <span class="font-12 margin-left grey-9">共搜索到293个商品</span>
-                    </div>
-                    <div class="screening-box">
-                        <div class="screening-item flex">
-                            <span class="screening-title grey-9 flex-child-noshrink lines-1">品牌：</span>
-                            <div class="screening-option flex flex-wrap flex-child-grow">
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
-                                <a href="" class="brand-item flex flex-center">
-                                    <img src="../img/guess1-3.webp" alt="">
-                                </a>
+        </div>
+        <!-- 又长又臭的商品详情 -->
+        <div class="flex flex-justify-between container">
+            <div class="left-side-part margin-top">
+                <div>
+                    <div class="border padding-bottom margin-bottom ">
+                        <div class="font-14 side-bar-header "><span class="bold">相关</span><span class="key-color bold">类别</span></div>
 
-                            </div>
-                        </div>
-                        <div class="screening-item flex">
-                            <span class="screening-title grey-9 flex-child-noshrink lines-1">价格：</span>
-                            <div class="screening-option flex flex-wrap flex-child-grow" style="padding:0;">
-                                <a href="" class="main-bgcolor white"> <span>全部</span></a>
-                                <a href="" class=""><span>0-599</span></a>
-                                <a href="" class=""><span>600-999</span>
-                                </a><a href="" class=""><span>1000-1999</span>
-                                </a><a href="" class=""><span>2000-2999</span>
-                                </a><a href="" class=""><span>3000-3999</span>
-                                </a><a href="" class=""><span>4000-4999</span>
-                                </a><a href="" class=""><span>5000以上</span>
-                                </a><a href="" class=""><span>稀缺高端</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="screening-item flex">
-                            <span class="screening-title grey-9 flex-child-noshrink lines-1">运行内存：</span>
-                            <div class="screening-option flex flex-wrap flex-child-grow" style="padding:0;">
-                                <a href="" class="main-bgcolor white"> <span>全部</span></a>
-                                <a href="" class=""><span>4G</span></a>
-                                <a href="" class=""><span>6G</span>
-                                </a><a href="" class=""><span>8G</span>
-                                </a><a href="" class=""><span>1G</span>
-                                </a><a href="" class=""><span>2G</span>
-                                </a><a href="" class=""><span>3G</span>
-                                </a><a href="" class=""><span>10G</span>
-                                </a><a href="" class=""><span>10G以上</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="screening-item flex">
-                            <span class="screening-title grey-9 flex-child-noshrink lines-1">机身内存：</span>
-                            <div class="screening-option flex flex-wrap flex-child-grow" style="padding:0;">
-                                <a href="" class="main-bgcolor white"> <span>全部</span></a>
-                                <a href="" class=""><span>4G</span></a>
-                                <a href="" class=""><span>16G</span>
-                                </a><a href="" class=""><span>32G</span>
-                                </a><a href="" class=""><span>64G</span>
-                                </a><a href="" class=""><span>128G</span>
-                                </a><a href="" class=""><span>256G</span>
-                                </a><a href="" class=""><span>518G</span>
-                                </a><a href="" class=""><span>518G以上</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="screening-item flex">
-                            <span class="screening-title grey-9 flex-child-noshrink lines-1">机身尺寸：</span>
-                            <div class="screening-option flex flex-wrap flex-child-grow" style="padding:0;">
-                                <a href="" class="main-bgcolor white"> <span>全部</span></a>
-                                <a href="" class=""><span>6.5英寸以上</span></a>
-                                <a href="" class=""><span>6.0-6.5英寸</span>
-                                </a><a href="" class=""><span>5.6-5.99英寸</span>
-                                </a><a href="" class=""><span>5.5-5.0英寸</span>
-                                </a><a href="" class=""><span>4.9-4.1英寸</span>
-                                </a><a href="" class=""><span>4.0英寸及以下</span>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="screening-item flex">
-                            <span class="screening-title grey-9 flex-child-noshrink lines-1">指纹识别：</span>
-                            <div class="screening-option flex flex-wrap flex-child-grow" style="padding:0;">
-                                <a href="" class="main-bgcolor white"> <span>全部</span></a>
-                                <a href="" class=""><span>不支持</span></a>
-                                <a href="" class=""><span>屏幕指纹</span>
-                                </a><a href="" class=""><span>背面指纹</span>
-                                </a><a href="" class=""><span>侧面指纹</span>
-                                </a><a href="" class=""><span>正面指纹</span>
-                                </a>
-                            </div>
+                        <div>
+                            <ul class="clearfix">
+                                <li class="cate-item"><a href="" class="padding-left padding-right">手机</a></li>
+                                <li class="cate-item"><a class="padding-left padding-right">手机配件</a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
-                <!-- 主体渲染盒子 -->
-                <div class="sort-bar flex flex-justify-between flex-align-center">
-                    <div class="sort flex">
-                        <div class="sort-item">
-                            <a href="javascript:" class="sort-item-text">综合</a>
-                        </div>
-                        <div class="sort-item price-ascending">
-                            <a href="javascript:" class="sort-item-text1 price-ascending">价格降序</a>
-                        </div>
-                        <div class="sort-item price-descending">
-                            <a href="javascript:" class="sort-item-text1" id="price-descending">价格升序</a>
+                    <!--  -->
+                    <div class="border padding-bottom margin-bottom ">
+                        <div class="font-14 side-bar-header "><span class="bold">同类其他</span><span class="key-color bold">品牌</span></div>
+                        <div style="position: relative; overflow: hidden;height: 255px;">
+                            <ul class="roll">
+                                <li class="brand-item"><a href=""><img src="../img/liebiao/水果.jpg" alt="" class="block left"><span>苹果</span></a></li>
+                                <li class="brand-item"><a href=""><img src="../img/liebiao/水果.jpg" alt="" class="block left"><span>苹果</span></a></li>
+                                <li class="brand-item"><a href=""><img src="../img/liebiao/水果.jpg" alt="" class="block left"><span>苹果</span></a></li>
+                                <li class="brand-item"><a href=""><img src="../img/liebiao/水果.jpg" alt="" class="block left"><span>苹果</span></a></li>
+                                <li class="brand-item"><a href=""><img src="../img/liebiao/水果.jpg" alt="" class="block left"><span>苹果</span></a></li>
+                            </ul>
                         </div>
                     </div>
-                    <!-- 仅显示有货 -->
-                    <div class="in-stock flex flex-center">
-                        <label class="el-checkbox">
-                            <span class="el-checkbox__input">
-                                <span class="el-checkbox__inner"></span>
-                                <input type="checkbox" aria-hidden="true" class="el-checkbox__original" value="">
-                            </span>
-                        </label>
-                        <span class="ml-5">仅显示有货</span>
-                    </div>
-                    <!-- 价格区间 -->
-                    <div class="price-section flex flex-center">
-                        价格区间：
-                        <input type="text" value="">-<input type="text" value="">
-                        <button>确定</button>
-                    </div>
-                    <!-- 分页 -->
-                    <div class="simple-pagination flex flex-center padding-right">
-                        <a href="" class="flex flex-center">
-                            < </a> <span class="ml-5 mr-5">1/15</span>
-                                <a href="" class="flex flex-center">
-                                    >
-                                </a>
+                    <!--  -->
+                    <div class="border padding-bottom margin-bottom ">
+                        <div class="font-14 side-bar-header "><span class="bold">同类</span><span class="key-color bold">排行榜</span></div>
+
+                        <div style="position: relative; overflow: hidden;">
+                            <ul class="tabs-nav">
+                                <li class="tab-item pointer">同价位</li>
+                                <li class="tab-item pointer">同品牌</li>
+                                <li class="tab-item pointer">同类别</li>
+                            </ul>
+                            <ul class="tabs-list">
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                                <li class="tab-list-item pointer"><a href="" class="flex"><img src="../img/liebiao/aqua.jpg"
+                                            alt="" class="lazy-img tab-list-item-img">
+                                        <div class="ml-5">
+                                            <p class="tab-list-item-name">
+                                                臭阿夸
+                                            </p>
+                                            <p><span class="grey-9">丫丫价：</span><span class="red bold">2999.00</span></p>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
-
-                <!-- 大盒子渲染开始！！！！！！！！！！！！ -->
-                <div class="list">
-                    <ul class="flex flex-wrap" id="listBox">
-
-                        <!-- <li>
-                            <a href="" class="main-pic-link">
-                                <img src="../img/列表页渲染图片/list1-1.jpg" alt="" class="main-pic">
-                            </a>
-
-                            <div class="sku-color flex mt-5 overflow-hide">
-                                <a href="" class="flex-child-noshrink">
-                                    <img src="../img/列表页渲染图片/list1-1.jpg" alt="">
-                                </a>
-                                <a href="" class="flex-child-noshrink">
-                                    <img src="../img/列表页渲染图片/list1-1.jpg" alt="">
-                                </a>
-                                <a href="" class="flex-child-noshrink">
-                                    <img src="../img/列表页渲染图片/list1-1.jpg" alt="">
-                                </a>
-                                <a href="" class="flex-child-noshrink">
-                                    <img src="../img/列表页渲染图片/list1-1.jpg" alt="">
-                                </a>
-                                <a href="" class="flex-child-noshrink">
-                                    <img src="../img/列表页渲染图片/list1-1.jpg" alt="">
-                                </a>
-                            </div>
-
-                            <a href="" title="小米9 全网通版 幻彩蓝 6GB+128GB  【新品热销】全球首批量产骁龙855，索尼4800万超广角微距三摄，全球首款20W无线闪充,第5代极速屏下指纹解锁！"
-                                class="lines-2 mt-5">小米9 全网通版 幻彩蓝 6GB+128GB
-                                【新品热销】全球首批量产骁龙855，索尼4800万超广角微距三摄，全球首款20W无线闪充,第5代极速屏下指纹解锁！
-                            </a>
-                            <div class="price mt-5 mb-5 flex">
-                                <span>
-                                    <b class="red font-14">￥2999.00</b>
-                                </span>
-                            </div>
-                            <p class="grey-9">
-                                已有
-                                <a href="" class="grey-9">
-                                    4
-                                </a> 人评价
+            </div>
+            <!-- 右边详情大盒子 -->
+            <div class="right-side-part margin-top">
+                <div id="introduce-com">
+                    <div class="sticky" style="top: 0px; z-index: 1;">
+                        <div class="tabs-box flex"><a href="javascript:" class="acitve">商品详情</a>
+                            <a href="javascript:" class="">详细参数</a>
+                            <a href="javascript:">商品细节</a>
+                            <a href="javascript:" class="">用户评价</a>
+                            <a href="javascript:" class="">商品咨询</a>
+                            <a href="javascript:" class="">售后保障</a>
+                        </div>
+                        <div class="detail-html text-center">
+                            <p style="text-align: center;">
+                                <img src="../img/liebiao/耶耶耶.jpg" title="" alt="">
                             </p>
-                        </li> -->
-
-                    </ul>
-                </div>
-                <!-- 跳页功能 -->
-                <div class="flex" style="margin-top:20px;justify-content: flex-end;">
-                    <div class="el-pagination is-background">
-                        <span class="el-pagination__total"></span>
-                        <button type="button" class="btn-prev" id="btnprev">
-                            <i>
-                                <</i> </button> <ul class="el-pager" id="pager">
-                                    <!-- <li class="number active">1</li> -->
-                                    </ul>
-                                    <button type="button" class="btn-next" id="btnnext">
-                                        <i>></i>
-                                    </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+
+
 
     <!-- 底部 -->
     <div class="footer">{

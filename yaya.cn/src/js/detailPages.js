@@ -1,5 +1,20 @@
+
+
 window.onload = function () {
     $(function () {
+        //取session storage的数据进行渲染
+        var yunlist =sessionStorage.getItem('value');
+        var dataobj = JSON.parse(yunlist)
+        console.log(dataobj)
+        $.each(dataobj,function(i,item){
+            console.log(item.id)
+            var html4 = '../img/列表页渲染图片/'+item.images;
+            $('#previewbox img:nth-child(1)').attr('src',html4);
+            $('.procuct-name span').html(item.title);
+            $('#yunprice').html(item.price)
+        })
+        
+        
         //个人中心指向事件--------------------------------------
         $('.top_user1').hover(function () {
             $('.top_user').css({
@@ -462,338 +477,87 @@ window.onload = function () {
             })
         })
         //---------------------------结束---------------------------------
-        //获取list的数据---------33 22 11 act -------------------------
-        var listbox = document.getElementById('listBox');
-        var btnnext = document.getElementById('btnnext');
-        var btnprev = document.getElementById('btnprev');
-        var ipage = 1; //第一页
-        var inum = 16; //每页5条
-        var url = '../api/04page.php';
-        var data = 'page=' + ipage + '&qty=' + inum;
-        //开始使用ajax获取数据
-        //封装ajax获取数据函数
-        ajax('post', url, data, function (str) {
-            // sessionStorage.setItem('value',str);
-            // console.log(str)
-            var lis = JSON.parse(str);
-            var arr = lis.data;
-            //获取数据源进行渲染
-            var res = arr.map(function (item) {
-                return ` <li data="${item.id}">
-                <a href="javascript:;" class="main-pic-link">
-                    <img src="../img/列表页渲染图片/${item.images}" alt="" class="main-pic">
-                </a>
-
-                <div class="sku-color flex mt-5 overflow-hide">
-                    <a href="" class="flex-child-noshrink">
-                        <img src="../img/列表页渲染图片/${item.images}" alt="">
-                    </a>
-                    <a href="" class="flex-child-noshrink">
-                        <img src="../img/列表页渲染图片/${item.images}" alt="">
-                    </a>
-                    <a href="" class="flex-child-noshrink">
-                        <img src="../img/列表页渲染图片/${item.images}" alt="">
-                    </a>
-                    <a href="" class="flex-child-noshrink">
-                        <img src="../img/列表页渲染图片/${item.images}" alt="">
-                    </a>
-                    <a href="" class="flex-child-noshrink">
-                        <img src="../img/列表页渲染图片/${item.images}" alt="">
-                    </a>
-                </div>
-
-                <a href="" title="${item.title}"
-                    class="lines-2 mt-5">${item.title}
-                </a>
-                <div class="price mt-5 mb-5 flex">
-                    <span>
-                        <b class="red font-14">￥${item.price}</b>
-                    </span>
-                </div>
-                <p class="grey-9">
-                    已有
-                    <a href="" class="grey-9">
-                        4
-                    </a> 人评价
-                </p>
-            </li>`
-            }).join('');
-
-            listbox.innerHTML = res;
-            // console.log(arr)
-            var total = lis.total;
-            var html4 = '共' + total + '条'
-            $('.el-pagination__total').html(html4)
-            //渲染按钮进行分页处理
-            var pageBtn = document.getElementById('pager');
-            var pages = Math.ceil(lis.total / lis.num);
-            var html = '';
-            for (var i = 0; i < pages; i++) {
-                html += ` <li class="number">${i+1}</li>`;
-            }
-            pageBtn.innerHTML = html;
-            // pageBtn.children[0].className = 'active';
-            //jq控制排他按钮颜色
-            $('#pager li:nth-child(1)').addClass('active')
-            //下一页的按钮触发
-            next()
-
-            function next() {
-                btnnext.onclick = function () {
-                    listbox.innerHTML = '';
-                    ipage++
-                    var num = 16;
-                    var data = 'page=' + ipage + '&qty=' + num;
-                    ajax('post', url, data, function (str) {
-
-                        var lis = JSON.parse(str);
-                        var arr = lis.data;
-                        // console.log(lis)
-                        var res = arr.map(function (item) {
-                            return ` <li data="${item.id}">
-                        <a href="javascript:;" class="main-pic-link">
-                            <img src="../img/列表页渲染图片/${item.images}" alt="" class="main-pic">
-                        </a>
-        
-                        <div class="sku-color flex mt-5 overflow-hide">
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                        </div>
-        
-                        <a href="" title="${item.title}"
-                            class="lines-2 mt-5">${item.title}
-                        </a>
-                        <div class="price mt-5 mb-5 flex">
-                            <span>
-                                <b class="red font-14">￥${item.price}</b>
-                            </span>
-                        </div>
-                        <p class="grey-9">
-                            已有
-                            <a href="" class="grey-9">
-                                4
-                            </a> 人评价
-                        </p>
-                    </li>`
-                        }).join('');
-
-                        listbox.innerHTML = res;
-                        $('#pager').find('li').eq(ipage - 1).addClass('active').siblings().removeClass('active')
-
-                    })
-
-                }
-            }
-
-            //上一页的按钮触发分页
-            btnprev.onclick = function () {
-                listbox.innerHTML = '';
-                ipage--;
-                var data = 'page=' + ipage + '&qty=' + inum;
-                ajax('post', url, data, function (str) {
-                    var lis = JSON.parse(str);
-                    var arr = lis.data;
-                    // console.log(lis)
-                    var res = arr.map(function (item) {
-                        return ` <li data="${item.id}">
-                        <a href="javascript:;" class="main-pic-link">
-                            <img src="../img/列表页渲染图片/${item.images}" alt="" class="main-pic">
-                        </a>
-        
-                        <div class="sku-color flex mt-5 overflow-hide">
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                        </div>
-        
-                        <a href="" title="${item.title}"
-                            class="lines-2 mt-5">${item.title}
-                        </a>
-                        <div class="price mt-5 mb-5 flex">
-                            <span>
-                                <b class="red font-14">￥${item.price}</b>
-                            </span>
-                        </div>
-                        <p class="grey-9">
-                            已有
-                            <a href="" class="grey-9">
-                                4
-                            </a> 人评价
-                        </p>
-                    </li>`
-                    }).join('');
-
-                    listbox.innerHTML = res;
-                    $('#pager').find('li').eq(ipage - 1).addClass('active').siblings().removeClass('active')
-
-                })
-            }
-        })
-        //降序排序按钮触发事件
-        $('.price-ascending').on('click', function () {
-
-            $.ajax({
-                type: "post",
-                url: "../api/goodlist.php",
-                async: true,
-                data: "APItype=goodlistdown&page=" + ipage + "&qty=" + inum,
-                success: function (str) {
-                    var arr = JSON.parse(str);
-                    var html6 = '';
-                    $.each(arr.list, function (i, item) {
-                        var html5 = ` <li data="${item.id}">
-                        <a href="javascript:;" class="main-pic-link">
-                            <img src="../img/列表页渲染图片/${item.images}" alt="" class="main-pic">
-                        </a>
-        
-                        <div class="sku-color flex mt-5 overflow-hide">
-                            <a href="/" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                        </div>
-        
-                        <a href="" title="${item.title}"
-                            class="lines-2 mt-5">${item.title}
-                        </a>
-                        <div class="price mt-5 mb-5 flex">
-                            <span>
-                                <b class="red font-14">￥${item.price}</b>
-                            </span>
-                        </div>
-                        <p class="grey-9">
-                            已有
-                            <a href="" class="grey-9">
-                                4
-                            </a> 人评价
-                        </p>
-                    </li>`;
-                        html6 += html5
-                        $('#listBox').html(html6)
-                    })
-
-                }
-
-            })
-        })
-        //升序按钮触发事件
-        $('.price-descending').on('click', function () {
-
-            $.ajax({
-                type: "post",
-                url: "../api/goodlist.php",
-                async: true,
-                data: "APItype=goodlistup&page=" + ipage + "&qty=" + inum,
-                success: function (str) {
-                    var arr = JSON.parse(str);
-                    var html7 = '';
-                    $.each(arr.list, function (i, item) {
-                        var html8 = ` <li data="${item.id}">
-                        <a href="javascript:;" class="main-pic-link">
-                            <img src="../img/列表页渲染图片/${item.images}" alt="" class="main-pic">
-                        </a>
-        
-                        <div class="sku-color flex mt-5 overflow-hide">
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                            <a href="" class="flex-child-noshrink">
-                                <img src="../img/列表页渲染图片/${item.images}" alt="">
-                            </a>
-                        </div>
-        
-                        <a href="" title="${item.title}"
-                            class="lines-2 mt-5">${item.title}
-                        </a>
-                        <div class="price mt-5 mb-5 flex">
-                            <span>
-                                <b class="red font-14">￥${item.price}</b>
-                            </span>
-                        </div>
-                        <p class="grey-9">
-                            已有
-                            <a href="" class="grey-9">
-                                4
-                            </a> 人评价
-                        </p>
-                    </li>`;
-                        html7 += html8
-                        $('#listBox').html(html7)
-                    })
-                }
-
-            })
-        })
         //回到顶部功能
         $('.tool-top').click(function () {
             $('html,body').animate({
                 scrollTop: 0
             }, 500);
         })
-        var ipage = 1; //第一页
-        var inum = 16; //每页5条
-        //点击获取商品id发起数据库查询
-        $('#listBox').on('click', 'li', function () {
-            console.log($(this).attr('data'))
-            var dataid = $(this).attr('data');
-            
-            $.ajax({
-                type: "get",
-                url: "../api/06find_id.php",
-                async: true,
-                data: "id=" + dataid,
-                success: function (str) {
-                    console.log(str)
-                    sessionStorage.setItem('value',str);
-                    window.open('detailPages.html')
-                }
-
-            })
-        })
     })
+    //放大镜开始！！！！！
+    var box = document.getElementById("previewbox"); //原图大盒子
+    var move = document.getElementById("move"); //鼠标在原图移动时遮罩
+    var bimg = document.getElementById("zoomer-pane-container"); //放大镜图片盒子
+    var imglist = document.querySelectorAll('.img');
+    var imgbox = document.getElementById('thumblist');
+    var lis = imgbox.querySelectorAll('.thumb-item');
+    var imgnum = 1;
+
+    // console.log(lis)
+    // 2、鼠标移 进 显示 遮罩 和 放大镜
+    for (var i = 0; i < lis.length; i++) {
+        lis[i].index = i;
+        lis[i].onmouseover = function (ev) {
+            var ev = window.event || event;
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].style.borderColor = '#fff';
+                imglist[i].style.display = 'none';
+            }
+            this.style.borderColor = '#f40';
+            imglist[this.index].style.display = 'block';
+            var src = ev.srcElement;
+            imgnum = src.id;
+            var maxX = parseInt(getStyle(imglist[this.index], 'width'));
+            var maxY = parseInt(getStyle(imglist[this.index], 'height'));
+            boxmove(imgnum, maxX, maxY);
+        }
+    }
+    box.onmouseover = () => {
+        bimg.style.display = 'block';
+        move.style.display = 'block';
+    }
+    // 3、鼠标移 出 隐藏 遮罩 和 放大镜
+    box.onmouseout = () => {
+        bimg.style.display = 'none';
+        move.style.display = 'none';
+    }
+    //所需的封装临界值
+    function getOffsetX(offset, min, max) {
+        if (offset < min) {
+            offset = min;
+        } else if (offset > max) {
+            offset = max;
+        }
+        return offset;
+    }
+    var ev = window.event || event;
+    
+    function boxmove(num, boxw, boxh) {
+        box.onmousemove = (ev) => {
+            //做兼容低版本
+
+            //clientX / Y 获取鼠标 水平 和 垂直 相对于  浏览器窗口  的位置
+            var X = ev.clientX;
+            var Y = ev.clientY;
+            //获取box 盒子 距离 body 顶部的距离
+            var T = box.offsetTop;
+            //获取box 盒子 距离最左侧的距离
+            var L = box.offsetLeft;
+            //计算遮罩 move 的 水平 位置
+            var left = X - L - move.offsetWidth*2;
+            //计算遮罩 move 的 垂直 位置
+            var top = Y - T - move.offsetHeight*2;
+            //左右 临界值 判断
+            var left1 = getOffsetX(left, 0, boxw - move.offsetWidth);
+            //上下 临界值 判断
+            var top1 = getOffsetX(top, 0, boxh - move.offsetHeight);
+            //设置move的 Top / Lefe 的位置
+            move.style.top = top1 + 'px';
+            move.style.left = left1 + 'px';
+            //精灵图控制
+            bimg.style.background = 'url(../img/liebiao/list1-' + num + '.jpg) no-repeat -' + left1 + 'px -' +
+                top1 + 'px';
+        }
+    }
+    boxmove(1, box.offsetWidth, box.offsetHeight)
 }
