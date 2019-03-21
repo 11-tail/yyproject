@@ -1,0 +1,135 @@
+.wrapper {
+  width: 960px;
+  font-family: 'Microsoft YaHei';
+  margin: 0 auto; }
+
+.log_head {
+  height: 80px;
+  overflow: hidden; }
+  .log_head .log_logo {
+    height: 80px;
+    width: 220px; }
+    .log_head .log_logo a {
+      position: relative;
+      width: 400px;
+      height: 80px;
+      display: block;
+      padding: 11px 0; }
+      .log_head .log_logo a span {
+        text-decoration: none;
+        color: #4FB99F;
+        font-weight: normal;
+        font-size: 20px;
+        position: absolute;
+        top: 23px;
+        left: 140px;
+        line-height: 36px;
+        border-left: 2px solid #d6d6d6;
+        padding-left: 40px; }
+
+.login_wrap {
+  background: #fff;
+  border: solid 8px #f0f0f0;
+  min-height: 340px;
+  margin-bottom: 20px;
+  padding-bottom: 30px; }
+  .login_wrap .zhuce-tab {
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    background: #eee;
+    display: inline-block;
+    font-family: 'Microsoft YaHei'; }
+    .login_wrap .zhuce-tab ul li {
+      float: left;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      border-right: solid 1px #ddd; }
+    .login_wrap .zhuce-tab .xz {
+      border-top: solid 2px #4FB99F;
+      font-size: 16px;
+      color: #666;
+      background: #fff; }
+
+.orange-bg {
+  background-color: #f70; }
+
+.regtip {
+  margin: 10px 10px 0 0;
+  text-shadow: 0 1px 0 #fff; }
+  .regtip a {
+    color: #fff;
+    margin-left: 5px;
+    padding: 2px;
+    text-shadow: none; }
+
+.reg dl {
+  line-height: 30px;
+  margin-top: 15px;
+  min-height: 30px; }
+  .reg dl dt {
+    color: #999;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    width: 100px; }
+    .reg dl dt i {
+      color: #e73828; }
+  .reg dl dd {
+    margin-left: 110px; }
+    .reg dl dd input[type=text],
+    .reg dl dd input[type=password] {
+      border: solid 1px #ccc;
+      border-radius: 2px;
+      box-shadow: inset 0 2px #f3f3f3;
+      height: 28px;
+      line-height: 28px\9;
+      text-indent: 5px;
+      width: 240px; }
+    .reg dl dd #canvas {
+      width: 260px;
+      height: 180px;
+      position: absolute; }
+    .reg dl dd button {
+      background: #4FB99F;
+      border: 0;
+      border-radius: 3px;
+      outline: none;
+      color: #fff;
+      cursor: pointer;
+      font-size: 14px;
+      height: 40px;
+      width: 160px; }
+
+.bottom {
+  background: #f6f6f6; }
+  .bottom .foot_nav {
+    height: 50px;
+    line-height: 50px;
+    text-shadow: 0 1px 0 #fff;
+    text-align: center; }
+    .bottom .foot_nav i {
+      margin: 0 15px;
+      color: #ccc; }
+  .bottom .copy {
+    padding-bottom: 15px;
+    text-align: center; }
+    .bottom .copy p {
+      line-height: 25px;
+      color: #999;
+      text-shadow: 0 1px 0 #fff; }
+  .bottom .bot-link {
+    text-align: center;
+    height: 60px; }
+    .bottom .bot-link a {
+      display: inline-block;
+      width: 130px;
+      height: 50px;
+      border: solid 1px #eee;
+      border-radius: 3px;
+      margin: 0 5px;
+      vertical-align: middle; }
+
+/*# sourceMappingURL=reg.css.map */

@@ -714,7 +714,6 @@ window.onload = function () {
         })
         //升序按钮触发事件
         $('.price-descending').on('click', function () {
-
             $.ajax({
                 type: "post",
                 url: "../api/goodlist.php",
@@ -728,7 +727,6 @@ window.onload = function () {
                         <a href="javascript:;" class="main-pic-link">
                             <img src="../img/列表页渲染图片/${item.images}" alt="" class="main-pic">
                         </a>
-        
                         <div class="sku-color flex mt-5 overflow-hide">
                             <a href="" class="flex-child-noshrink">
                                 <img src="../img/列表页渲染图片/${item.images}" alt="">
@@ -746,7 +744,6 @@ window.onload = function () {
                                 <img src="../img/列表页渲染图片/${item.images}" alt="">
                             </a>
                         </div>
-        
                         <a href="" title="${item.title}"
                             class="lines-2 mt-5">${item.title}
                         </a>
@@ -766,7 +763,6 @@ window.onload = function () {
                         $('#listBox').html(html7)
                     })
                 }
-
             })
         })
         //回到顶部功能
@@ -789,7 +785,7 @@ window.onload = function () {
                 data: "id=" + dataid,
                 success: function (str) {
                     console.log(str)
-                    sessionStorage.setItem('value',str);
+                    sessionStorage.setItem('valu e',str);
                     window.open('detailPages.html')
                 }
 

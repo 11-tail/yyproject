@@ -5,9 +5,9 @@ window.onload = function () {
         //取session storage的数据进行渲染
         var yunlist =sessionStorage.getItem('value');
         var dataobj = JSON.parse(yunlist)
-        console.log(dataobj)
+        // console.log(dataobj)
         $.each(dataobj,function(i,item){
-            console.log(item.id)
+            // console.log(item.id)
             var html4 = '../img/列表页渲染图片/'+item.images;
             $('#previewbox img:nth-child(1)').attr('src',html4);
             $('.procuct-name span').html(item.title);

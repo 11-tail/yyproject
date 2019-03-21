@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>会员注册 -丫丫网</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../scss/reg.css">
+    <script src="../js/common.js"></script>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/reg.js"></script>
+</head>
+
+<body style="background: #f6f6f6;">
+    <div class="wrapper">
+        <div class="log_head">
+            <h1 class="log_logo fl">
+                <a href="/">
+                    <img src="../img/yaya.png" width="113" height="50">
+                    <span>新用户注册</span>
+                </a>
+            </h1>
+        </div>
+        <div class="login_wrap">
+            <div class="zhuce-tab">
+                <ul>
+                    <li class="xz">快速注册</li>
+                </ul>
+            </div>
+            <div class="regtip fr">
+                已有丫丫网账号？现在就
+                <a class="orange-bg" href="login.html">登录</a>
+            </div>
+            <div class="xxknr">
+                <div class="reg">
+                    <dl>
+                        <dt><i>*</i>用户名</dt>
+                        <dd>
+                            <input type="text" id="userUID">
+                            <em>4-16位字母、数字或汉字，请不要输入特殊字符！</em>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><i>*</i>密码</dt>
+                        <dd>
+                            <input type="password" id="userpwd3"><em>6个字符以上的字母或数字</em></dd>
+                    </dl>
+                    <dl>
+                        <dt><i>*</i>重复密码</dt>
+                        <dd>
+                            <input type="password" id="userpwd4"><em>请重复输入密码确认不会输错</em></dd>
+                    </dl>
+                    <dl>
+                        <dt><i>*</i>手机号码</dt>
+                        <dd>
+                            <input type="text" id="usermobile2"><em>手机号码非常重要，找回密码及购物都会用到</em></dd>
+                    </dl>
+                    <dl id="codedl2">
+                        <dt>验证码</dt>
+                        <dd style="position:relative">
+                            <input type="text" id="yzmcode2" style="width: 120px;">
+                           <canvas id="canvas"></canvas>
+                            <a id="reflashCode" href="javascript:void(0)" style="position:absolute;left: 260px;">看不清楚？换一张</a></dd>
+                    </dl>
+                    <dl>
+                        <dt></dt>
+                        <dd>
+                            <input name="" id="mmprovision2" type="checkbox" checked="" style="margin-right: 5px; vertical-align: middle;">
+                            <label style="color: #999;">
+                                我已认真阅读并同意
+                                <a href="javascript:;" class="showyhzt" style="color: #39f; margin: 0 5px;">
+                                    《丫丫网用户协议》
+                                </a>
+                            </label>
+                        </dd>
+                    </dl>
+                    <dl>
+                            <dt></dt>
+                            <dd>
+                                <button id="regbut2">提交注册</button></dd>
+                        </dl>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- 最底部 -->
+    <div class="bottom">
+            <div class="container">
+                <div class="foot_nav">
+                    <a href="">常见问题</a><i>|</i>
+                    <a href="">关于我们</a><i>|</i>
+                    <a href="">联系我们</a><i>|</i>
+                    <a href="">投诉建议</a>
+                </div>
+                <div class="copy">
+                    <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：4009-955-966
+                        &nbsp;&nbsp;&nbsp;&nbsp;工作时间：周一至周日 09:00-21:30</p>
+                    <p>网站ICP备案号：
+                        <a href="">
+                            滇ICP备11005817号-7
+                        </a>
+                        &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20160011号 &nbsp;&nbsp;&nbsp;&nbsp;
+                        <a>
+                            滇公网安备 53011102000207号
+                        </a> &nbsp;&nbsp;&nbsp;&nbsp;
+                    </p>
+    
+                    <p>丫丫 Copyright © 2007 - 2019 丫丫网 All Rights Reserved</p>
+                    <p>昆明丫丫科技有限公司版权所有</p>
+                </div>
+                <div class="bot-link">
+                    <a href="" class="wangjian" style="background:#fff">
+                        <img src="../img/wangjian.jpg" alt="">
+                    </a>
+                    <a href="" class="wangjian" style="background:#fff">
+                        <img src="../img/wangjian.jpg" alt="">
+                    </a>
+                    <a href="" class="wangjian" style="background:#fff">
+                        <img src="../img/wangjian.jpg" alt="">
+                    </a>
+                    <a href="" class="wangjian" style="background:#fff">
+                        <img src="../img/wangjian.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

@@ -1,5 +1,41 @@
 window.onload = function () {
     $(function () {
+        //检测登录状态
+        updata()
+
+        function updata() {
+            var uid = getCookie('uid');
+            var name = getCookie('username');
+            if (uid) { //已经登陆之后cookie会有uid存在 0就是没有登录状态 有就是已登录
+                //已登录
+                $('#login').css('color','#58bc58').html(name);
+                $('#reg').css('color','red').html('退出');
+                $('#reg').attr('href','javascript:;');
+                $('#userInfo p').html(name);
+                $('#userInfo p').next().html('');
+                $('#userInfo p').next().next().css('color','red').html('退出');
+                $('#userInfo p').next().next().css('color','red').attr('href','javascript:;');
+                $('#reg').on('click',function(){
+                    $.ajax({
+                        type: "post",
+                        url: "api/guestbook/index.php",
+                        async: true,
+                        data: "m=index&a=logout",
+                        success: function (str) {
+                            console.log(str);
+                            var arr = JSON.parse(str);
+                            alert(arr.message);
+                            setTimeout(function(){
+                                window.location.reload()
+                            },1000)
+                        }
+                    })
+                })
+            } else {
+                //这里是未登录状态
+                
+            }
+        }
         //个人中心指向事件--------------------------------------
         $('.top_user1').hover(function () {
             $('.top_user').css({
@@ -564,7 +600,7 @@ window.onload = function () {
         var reslist = troika.map(function (item4) {
             return ` <div class="troika-list margin-right" data-id:"${item4.id}">
         <div class="troika_title">
-            <a href="">
+            <a href="html/detail.html">
                 <img src="img/${item4.logoimg}" alt="">
             </a>
         </div>
@@ -905,20 +941,20 @@ window.onload = function () {
     var oNav = $('.diy-elevator'); //导航壳
     var aNav = oNav.find('a'); //导航
     var aDiv = $('#homebox #diy-floor1'); //楼层
-    
+
     $(window).scroll(function () {
         //可视窗口高度
         var winH = $(window).height();
         //鼠标滚动的距离
         var iTop = $(window).scrollTop();
-        
+
         aDiv.each(function () {
-            if (winH + iTop - $(this).offset().top+499> winH / 2) {
+            if (winH + iTop - $(this).offset().top + 499 > winH / 2) {
                 aNav.removeClass('active1');
-                console.log(aDiv.lengt)
+                // console.log(aDiv.lengt)
                 aNav.eq($(this).index()).addClass('active1');
             }
-            
+
         })
     })
     //点击回到当前楼层
@@ -929,7 +965,7 @@ window.onload = function () {
         }, 500);
         $(this).addClass('active1').siblings().removeClass('active1');
     });
-    
+
 
 
 }
