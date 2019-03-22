@@ -1,20 +1,78 @@
-
-
 window.onload = function () {
     $(function () {
+        updata()
+
+        function updata() {
+            var uid = getCookie('uid');
+            var name = getCookie('username');
+            if (uid) { //已经登陆之后cookie会有uid存在 0就是没有登录状态 有就是已登录
+                //已登录
+                $('#login').css('color', '#58bc58').html(name);
+                $('#reg').css('color', 'red').html('退出');
+                $('#reg').attr('href', 'javascript:;');
+                $('#userInfo p').html(name);
+                $('#userInfo p').next().html('');
+                $('#userInfo p').next().next().css('color', 'red').html('退出');
+                $('#userInfo p').next().next().css('color', 'red').attr('href', 'javascript:;');
+                $('#reg').on('click', function () {
+                    $.ajax({
+                        type: "post",
+                        url: "../api/guestbook/index.php",
+                        async: true,
+                        data: "m=index&a=logout",
+                        success: function (str) {
+                            console.log(str);
+                            var arr = JSON.parse(str);
+                            alert(arr.message);
+                            setTimeout(function () {
+                                window.location.reload()
+                            }, 1000)
+                        }
+                    })
+                })
+            } else {
+                //这里是未登录状态
+
+            }
+        }
         //取session storage的数据进行渲染
-        var yunlist =sessionStorage.getItem('value');
+        var yunlist = sessionStorage.getItem('value');
         var dataobj = JSON.parse(yunlist)
         // console.log(dataobj)
-        $.each(dataobj,function(i,item){
-            // console.log(item.id)
-            var html4 = '../img/列表页渲染图片/'+item.images;
-            $('#previewbox img:nth-child(1)').attr('src',html4);
+        $.each(dataobj, function (i, item) {
+            // console.log(item)
+            var html4 = '../img/列表页渲染图片/' + item.images;
+            $('#previewbox img:nth-child(1)').attr('src', html4);
             $('.procuct-name span').html(item.title);
-            $('#yunprice').html(item.price)
+            $('#yunprice').html(item.price);
+            
+            //加入购物车功能-------------------------------------
+
+            $('#product-btn').on('click', function () {
+                var titlelist = $('#titles').html();
+                var qian = $('#yunprice').html();
+                var srcs = $('#previewbox img:nth-child(1)').attr('src')
+                console.log(item.id)
+                $.ajax({
+                    type: "post",
+                    url: "../api/orderCar.php",
+                    async: true,
+                    data: "id="+item.id+"&APItype=addOrderCar&title="+ titlelist + "&num=1&price=" + qian + "&url=" + srcs,
+                    success: function (str) {
+                        console.log(str)
+                        if (str == 1) {
+                            alert('加入购物车成功');
+                            setTimeout(function () {
+                                window.open('car.html')
+                            }, 1000)
+                        } else {
+                            alert('加入购物车失败')
+                        }
+
+                    }
+                })
+            })
         })
-        
-        
         //个人中心指向事件--------------------------------------
         $('.top_user1').hover(function () {
             $('.top_user').css({
@@ -478,11 +536,13 @@ window.onload = function () {
         })
         //---------------------------结束---------------------------------
         //回到顶部功能
+
         $('.tool-top').click(function () {
             $('html,body').animate({
                 scrollTop: 0
             }, 500);
         })
+
     })
     //放大镜开始！！！！！
     var box = document.getElementById("previewbox"); //原图大盒子
@@ -531,7 +591,7 @@ window.onload = function () {
         return offset;
     }
     var ev = window.event || event;
-    
+
     function boxmove(num, boxw, boxh) {
         box.onmousemove = (ev) => {
             //做兼容低版本
@@ -544,9 +604,9 @@ window.onload = function () {
             //获取box 盒子 距离最左侧的距离
             var L = box.offsetLeft;
             //计算遮罩 move 的 水平 位置
-            var left = X - L - move.offsetWidth*2;
+            var left = X - L - move.offsetWidth * 2;
             //计算遮罩 move 的 垂直 位置
-            var top = Y - T - move.offsetHeight*2;
+            var top = Y - T - move.offsetHeight * 2;
             //左右 临界值 判断
             var left1 = getOffsetX(left, 0, boxw - move.offsetWidth);
             //上下 临界值 判断

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>购物车 - 丫丫网</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../scss/car.css">
+    <link rel="stylesheet" href="../iconfont/iconfont.css">
+    <script src="../js/common.js"></script>
+    <script src="../js/jquery-1.10.1.min.js"></script>
+    <script src="../js/car.js"></script>
+    <script src="../lib/city/jquery.cityselect.js"></script>
+</head>
+
+<body>
+    <div class="top">
+        <div class="container">
+            <!-- 地址 ---------------------->
+            <div class="top_location fl">
+                <a href="#" class="dizhi">
+                    <i></i>
+                </a>
+            </div>
+            <!-- 登录注册 ---------------------->
+            <div class="top_login fl">
+                <p>
+                    Hi，欢迎来丫丫！
+                    <a href="login.html" id="login">登录</a>
+                    <a href="reg.html" id="reg">免费注册</a>
+                </p>
+            </div>
+            <!-- 导航 ---------------------->
+            <div class="top_menu fr">
+                <a href="" class="top_user1">
+                    个人中心
+                    <i class="triangle-down"></i>
+                </a>
+                <a href="">
+                    <i class="vip"></i>
+                    会员中心
+                </a>
+                <a href="">
+                    帮助中心
+                </a>
+                <a href="">
+                    在线客服
+                </a>
+                <a href="" class="nav_show">
+                    网站导航
+                    <i class="triangle-down"></i>
+                </a>
+                <a href="">
+                    <i class="jubao"></i>
+                    不良信息举报
+                </a>
+                <a href="" class="phone">
+                    <i class="dianhua"></i>
+                    4009-955-966
+                </a>
+            </div>
+            <!-- 个人中心二级导航 ---------------->
+            <div class="top_user">
+                <a href="">我的订单</a>
+                <a href="">我的积分</a>
+                <a href="">我的试用</a>
+                <a href="">我的收藏</a>
+                <a href="">我的咨询</a>
+                <a href="">我的优惠券</a>
+                <a href="">报修/退换货</a>
+            </div>
+            <!-- /* 二级网站导航！！！！！！！！--------------- */ -->
+            <div class="top_item">
+                <ul>
+                    <li class="tese-box">
+                        <h3 class="orange">丫丫特色</h3>
+                        <div class="nav_list">
+                            <a href="">附近门店</a>
+                            <a href="">
+                                免费贴膜
+                                <i class="hot"></i>
+                            </a>
+                            <a href="">旧机回收</a>
+                            <a href="">预约维修</a>
+                        </div>
+                    </li>
+                    <li class="fuwu-box">
+                        <h3 class="purple">服务集市</h3>
+                        <div class="nav_list">
+                            <a href="">在线支付</a>
+                            <a href="">帮助中心</a>
+                            <a href="">丫丫服务</a>
+                            <a href="">会员俱乐部<i class="hot"></i></a>
+                        </div>
+                    </li>
+                    <li class="join-box">
+                        <h3 class="light-blue">招商合作</h3>
+                        <div class="nav_list">
+                            <a href="">丫丫百科</a>
+                        </div>
+                    </li>
+                    <li class="more-choice">
+                        <h3 style="color:#73ae37;">更多精选</h3>
+                        <div class="nav_list">
+                            <a href="">丫丫头条</a>
+                        </div>
+                    </li>
+                    <li class="product-choice">
+                        <h3 class="light-red">产品选择</h3>
+                        <div class="nav_list">
+                            <a href="">手机</a>
+                            <a href="">手机配件<i class="hot"></i></a>
+                            <a href="">电脑周边</a>
+                            <a href="">耳机音响</a>
+                            <a href="">智能产品<i class="new1"></i></a>
+                            <a href="">笔记本/电脑</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!-- /* 二级地址选择！！！！！！！！--------------- */ -->
+            <div class="city_wrap">
+                <a href="javascript:;" class="close"></a>
+                <p class="city-hot">热门城市：
+                    <a href="javascript:;" class="city-item">昆明</a>
+                    <a href="javascript:;" class="city-item">贵阳</a>
+                    <a href="javascript:;" class="city-item">重庆</a>
+                    <a href="javascript:;" class="city-item">大理</a>
+                </p>
+
+                <div class="city-tab">
+                    <a href="javascript:;" class="city-item1">请选择-省份-</a>
+                    <a href="javascript:;" class="city-item2">请选择-城市-</a>
+                    <a href="javascript:;" class="city-item3">请选择-区-</a>
+                </div>
+
+                <div class="city-box">
+                    <ul class="sheng">
+                    </ul>
+                    <ul class="city2" style="display:none">
+
+                    </ul>
+                    <ul class="qu" style="display:none">
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="cart">
+        <div class="order-head overflow-hide">
+            <a href="/" class="order-logo fl">
+                <img src="../img/yaya.png">
+            </a>
+            <div class="order-step fr">
+                <dl class="cur1">
+                    <dt>1</dt>
+                    <dd>我的购物车</dd>
+                </dl>
+                <dl><dt>2</dt>
+                    <dd>填写核对订单</dd>
+                </dl>
+                <dl><dt>3</dt>
+                    <dd>付款</dd>
+                </dl>
+            </div>
+        </div>
+
+        <div class="cart-box">
+
+            <div class="cart-nothing">
+                <img src="../img/car.png">
+                <p>购物车里还没有商品，快 <a href="/" target="_parent" class="main-color">去逛逛</a> 吧</p>
+            </div>
+            <!--  -->
+            <div class="cart-tab">
+                <div class="fl">
+                    <a href="javascript:;" class="cur2">
+                        全部商品
+                        <span class="main-color"></span>
+                    </a>
+                </div>
+                <p class="fr">
+                    已选
+                    <span class="red">1</span>
+                    件，合计（不含运费）
+                    <b class="red">￥4488.00</b>
+                </p>
+            </div>
+
+            <div class="carlist">
+                <div class="cart-item cart-title">
+                    <div class="cart-check">
+                        <label class="checkbox radio-box">
+                            <input type="checkbox" class="shopChoice">
+                            全选
+                        </label>
+                    </div>
+                    <div class="cart-product-box">
+                        <div class="product fl" style="width: 446px;padding-left: 104px;">商品</div>
+                        <div class="unit-price">单价（元）</div>
+                        <div class="discount">优惠（元）</div>
+                        <div class="count">数量</div>
+                        <div class="sum">小计（元）</div>
+                        <div class="action fl">操作</div>
+                    </div>
+                </div>
+                <!-- 商品详情 -->
+                
+                <!-- <div class="cart-item" style="border: solid 1px #dfdfdf;">
+                    <div>
+                        <div class="cart-check">
+                            <label class="checkbox radio-box" >
+                                <input type="checkbox" checked="" style="margin-top:35px">
+                            </label>
+                        </div>
+                        <div class="cart-product-box relative">
+                            <div class="product">
+                                <a href="" class="block relative fl pro-img-box">
+                                    <img src="../img/嘶哈嘶哈.jpg">
+                                </a>
+                                <div class="product-title">
+                                    <h5>
+                                        <a href="">
+                                            华为 P20 Pro（CLT-AL00） 全网通版 极光闪蝶 6GB+64GB
+                                        </a>
+                                    </h5>
+                                    <div class="margin-top"></div>
+                                </div>
+                                <div class="jiuji-server margin-top overflow-hide">
+                                    <a href="javascript:;" class="grey-9">
+                                        <i class="baoxiu"></i>
+                                        选服务
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="unit-price"><b>4488.00</b></div>
+                            <div class="discount">0.00</div>
+                            <div class="count">
+                                <a href="javascript:;">-</a>
+                                <input type="text" disabled="disabled">
+                                <a href="javascript:;">+</a>
+                            </div>
+                            <div class="sum"><b class="red" id="qian">4488.00</b></div>
+                            <div class="action">
+                                <a href="javascript:;" class="move-to-favorate">移入收藏夹</a>
+                                <a href="javascript:;">删除</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                
+            </div>
+            <div class="caritembox">
+
+            </div>
+            <!-- 结算盒子 -->
+            <div class="cart-total">
+                <div class="fl margin-left">
+                        <label class="checkbox radio-box">
+                            <input type="checkbox" class="checkall">全选
+                            <a href="javascript:;" class="delall">全部删除</a>
+                        </label>
+                </div>
+                <div class="fr">
+                        <span>已选商品 <b class="red large-font">0</b> 件</span>
+                        <span>总计（不含运费）： <b class="red title-font">￥0.00</b></span>
+                        <button id="goConfirm" class="button">结 算</button>
+                </div>
+            </div>
+        </div>
+        <div class="cart-guess-box">
+                <h3>为你优选</h3>
+                <div class="cart-guess overflow-hide">
+                    <div class="cart-guess-product left">
+                        <div class="tempWrap" style="overflow:hidden; position:relative; width:1135px">
+                            <ul style="width: 2270px; left: 0px; position: relative; overflow: hidden; padding: 0px; margin: 0px;">
+                                <li style="float: left; width: 207px;">
+                                    <a href="javascript:;">
+                                        <img src="../img/嘶哈嘶哈.jpg" width="160" height="160" alt="">
+                                    </a>
+                                    <h4 class="normal">
+                                        <a href="">Apple iPhone 8 Plus（A1864） 全网通版</a>
+                                    </h4>
+                                    <p>丫丫价：<b class="nowPrice red">￥4760</b></p>
+                                    <button class="button button-red">加入购物车</button>
+                                </li>
+                                <li style="float: left; width: 207px;">
+                                    <a href="javascript:;">
+                                        <img src="../img/嘶哈嘶哈.jpg" width="160" height="160" alt="">
+                                    </a>
+                                    <h4 class="normal">
+                                        <a href="">Apple iPhone 8 Plus（A1864） 全网通版</a>
+                                    </h4>
+                                    <p>丫丫价：<b class="nowPrice red">￥4760</b></p>
+                                    <button class="button button-red">加入购物车</button>
+                                </li>
+                                <li style="float: left; width: 207px;">
+                                    <a href="javascript:;">
+                                        <img src="../img/嘶哈嘶哈.jpg" width="160" height="160" alt="">
+                                    </a>
+                                    <h4 class="normal">
+                                        <a href="">Apple iPhone 8 Plus（A1864） 全网通版</a>
+                                    </h4>
+                                    <p>丫丫价：<b class="nowPrice red">￥4760</b></p>
+                                    <button class="button button-red">加入购物车</button>
+                                </li>
+                                <li style="float: left; width: 207px;">
+                                    <a href="javascript:;">
+                                        <img src="../img/嘶哈嘶哈.jpg" width="160" height="160" alt="">
+                                    </a>
+                                    <h4 class="normal">
+                                        <a href="">Apple iPhone 8 Plus（A1864） 全网通版</a>
+                                    </h4>
+                                    <p>丫丫价：<b class="nowPrice red">￥4760</b></p>
+                                    <button class="button button-red">加入购物车</button>
+                                </li>
+                                <li style="float: left; width: 207px;">
+                                    <a href="javascript:;">
+                                        <img src="../img/嘶哈嘶哈.jpg" width="160" height="160" alt="">
+                                    </a>
+                                    <h4 class="normal">
+                                        <a href="">Apple iPhone 8 Plus（A1864） 全网通版</a>
+                                    </h4>
+                                    <p>丫丫价：<b class="nowPrice red">￥4760</b></p>
+                                    <button class="button button-red">加入购物车</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    </div>
+    <!-- 最底部 -->
+    <div class="bottom">
+        <div class="container">
+            <div class="foot_nav">
+                <a href="">常见问题</a><i>|</i>
+                <a href="">关于我们</a><i>|</i>
+                <a href="">联系我们</a><i>|</i>
+                <a href="">投诉建议</a>
+            </div>
+            <div class="copy">
+                <p>各门店营业时间：周一至周日 09:00-21:30 &nbsp;&nbsp;&nbsp;&nbsp; 全国服务热线：4009-955-966
+                    &nbsp;&nbsp;&nbsp;&nbsp;工作时间：周一至周日 09:00-21:30</p>
+                <p>网站ICP备案号：
+                    <a href="">
+                        滇ICP备11005817号-7
+                    </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp; 电信业务经营许可证：滇B2-20160011号 &nbsp;&nbsp;&nbsp;&nbsp;
+                    <a>
+                        滇公网安备 53011102000207号
+                    </a> &nbsp;&nbsp;&nbsp;&nbsp;
+                </p>
+
+                <p>丫丫 Copyright © 2007 - 2019 丫丫网 All Rights Reserved</p>
+                <p>昆明丫丫科技有限公司版权所有</p>
+            </div>
+            <div class="bot-link">
+                <a href="" class="wangjian" style="background:#fff">
+                    <img src="../img/wangjian.jpg" alt="">
+                </a>
+                <a href="" class="wangjian" style="background:#fff">
+                    <img src="../img/wangjian.jpg" alt="">
+                </a>
+                <a href="" class="wangjian" style="background:#fff">
+                    <img src="../img/wangjian.jpg" alt="">
+                </a>
+                <a href="" class="wangjian" style="background:#fff">
+                    <img src="../img/wangjian.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

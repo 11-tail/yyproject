@@ -1,5 +1,40 @@
 window.onload = function () {
     $(function () {
+        updata()
+
+        function updata() {
+            var uid = getCookie('uid');
+            var name = getCookie('username');
+            if (uid) { //已经登陆之后cookie会有uid存在 0就是没有登录状态 有就是已登录
+                //已登录
+                $('#login').css('color','#58bc58').html(name);
+                $('#reg').css('color','red').html('退出');
+                $('#reg').attr('href','javascript:;');
+                $('#userInfo p').html(name);
+                $('#userInfo p').next().html('');
+                $('#userInfo p').next().next().css('color','red').html('退出');
+                $('#userInfo p').next().next().css('color','red').attr('href','javascript:;');
+                $('#reg').on('click',function(){
+                    $.ajax({
+                        type: "post",
+                        url: "../api/guestbook/index.php",
+                        async: true,
+                        data: "m=index&a=logout",
+                        success: function (str) {
+                            console.log(str);
+                            var arr = JSON.parse(str);
+                            alert(arr.message);
+                            setTimeout(function(){
+                                window.location.reload()
+                            },1000)
+                        }
+                    })
+                })
+            } else {
+                //这里是未登录状态
+                
+            }
+        }
         //个人中心指向事件--------------------------------------
         $('.top_user1').hover(function () {
             $('.top_user').css({
@@ -785,10 +820,9 @@ window.onload = function () {
                 data: "id=" + dataid,
                 success: function (str) {
                     console.log(str)
-                    sessionStorage.setItem('valu e',str);
+                    sessionStorage.setItem('value',str);
                     window.open('detailPages.html')
                 }
-
             })
         })
     })

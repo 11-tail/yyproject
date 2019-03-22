@@ -1,6 +1,7 @@
 <?php
 /*
-     - 详情页跳转到购物车页    id传到购物车，购物车页查询该商品的数据，将数据插入到订单表,拿订单表的数据，渲染到购物车(jq讲购物车)
+     - 详情页跳转到购物车页    id传到购物车，购物车页查询该商品的数据，
+     将数据插入到订单表,拿订单表的数据，渲染到购物车(jq讲购物车)
 */
 /*
      方式：post
@@ -15,11 +16,31 @@
 			}]
 */
 
-       //连接数据库
-    include 'connect.php';
-
-    //中文乱码
+     /*
+	 	连接数据库：操纵数据库
+	 		* 写好配置信息
+	 		* 检测是否连接成功
+	 */
+	//中文乱码
     header("content-type:text/html;charset=utf-8");
+	//配置参数
+	$servername = 'localhost';
+	$username = 'root';
+	$passname = '';
+	$dbname = 'benlai';
+	
+	//建立链接：$conn对象  js中调用对象的属性  arr.lenght 
+	//php调用属性和方法  ->   $conn -> lenght
+	$conn = new mysqli($servername,$username,$passname,$dbname);
+	
+	//判断是否连接成功
+	if($conn->connect_error) {
+		die('出错原因是:'.$conn->connect_error);
+	}
+	
+//	echo '连接成功';
+
+    
 
     //1.接收参数
     $goods_id = isset($_POST['id']) ? $_POST['id'] : '';
