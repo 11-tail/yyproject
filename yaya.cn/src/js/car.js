@@ -43,7 +43,7 @@ window.onload = function () {
             success: function (str) {
                 var arr = JSON.parse(str)
                 if (arr.list == '') {
-                    $('.cart-nothing').css('display', 'block');
+                    $('.cart-nothing').css('display','block');
                     $('.cart-tab').css('display', 'none');
                     $('.carlist').css('display', 'none');
                 } else {
@@ -57,7 +57,7 @@ window.onload = function () {
                             <div class="cart-check">
                                 <label class="checkbox radio-box" >
                                     <input type="checkbox" checked="false" style="margin-top:35px" class="checkboxs">
-                                </label>
+                                </label>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
                             </div>
                             <div class="cart-product-box relative">
                                 <div class="product">
